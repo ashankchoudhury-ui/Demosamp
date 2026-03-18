@@ -27,26 +27,26 @@ const Gallery = () => {
   const staticCases: GalleryItem[] = [
     { 
       title: "Teeth Whitening", 
-      before: "/gallery/whitening_before.jpg", 
-      after: "/gallery/whitening_after.jpg",
+      before: "/gallery/whitening_before.jpg?v=2", 
+      after: "/gallery/whitening_after.jpg?v=2",
       isStatic: true
     },
     { 
       title: "Dental Veneers", 
-      before: "/gallery/veneers_before.jpg", 
-      after: "/gallery/veneers_after.jpg",
+      before: "/gallery/veneers_before.jpg?v=2", 
+      after: "/gallery/veneers_after.jpg?v=2",
       isStatic: true
     },
     { 
       title: "Dental Implants", 
-      before: "/gallery/implants_before.jpg", 
-      after: "/gallery/implants_after.jpg",
+      before: "/gallery/implants_before.jpg?v=2", 
+      after: "/gallery/implants_after.jpg?v=2",
       isStatic: true
     },
     { 
       title: "Clear Alignment", 
-      before: "/gallery/alignment_before.jpg", 
-      after: "/gallery/alignment_after.jpg",
+      before: "/gallery/alignment_before.jpg?v=2", 
+      after: "/gallery/alignment_after.jpg?v=2",
       isStatic: true
     },
   ];
