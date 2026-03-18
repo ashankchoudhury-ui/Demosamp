@@ -27,26 +27,26 @@ const Gallery = () => {
   const staticCases: GalleryItem[] = [
     { 
       title: "Teeth Whitening", 
-      before: "https://images.unsplash.com/photo-1593059025398-0f3d44012e56?auto=format&fit=crop&q=80&w=600", 
-      after: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=600",
+      before: "/gallery/whitening_before.jpg", 
+      after: "/gallery/whitening_after.jpg",
       isStatic: true
     },
     { 
       title: "Dental Veneers", 
-      before: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600", 
-      after: "https://images.unsplash.com/photo-1594492759196-667899fb5ba0?auto=format&fit=crop&q=80&w=600",
+      before: "/gallery/veneers_before.jpg", 
+      after: "/gallery/veneers_after.jpg",
       isStatic: true
     },
     { 
       title: "Dental Implants", 
-      before: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=600", 
-      after: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&q=80&w=600",
+      before: "/gallery/implants_before.jpg", 
+      after: "/gallery/implants_after.jpg",
       isStatic: true
     },
     { 
       title: "Clear Alignment", 
-      before: "https://images.unsplash.com/photo-1513412803932-43f77d6f8564?auto=format&fit=crop&q=80&w=600", 
-      after: "https://images.unsplash.com/photo-1597764690523-15bea4c581c9?auto=format&fit=crop&q=80&w=600",
+      before: "/gallery/alignment_before.jpg", 
+      after: "/gallery/alignment_after.jpg",
       isStatic: true
     },
   ];
