@@ -1,0 +1,64 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile and role information",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Firebase Auth UID" },
+        "email": { "type": "string", "format": "email", "description": "User's email address" },
+        "displayName": { "type": "string", "description": "User's full name" },
+        "role": { "type": "string", "enum": ["patient", "admin"], "description": "User's role in the system" }
+      },
+      "required": ["uid", "email", "role"]
+    },
+    "GallerySubmission": {
+      "title": "Gallery Submission",
+      "description": "A before-and-after photo submission from a patient",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique submission ID" },
+        "patientUid": { "type": "string", "description": "UID of the patient who uploaded" },
+        "patientName": { "type": "string", "description": "Name of the patient" },
+        "title": { "type": "string", "description": "Title of the transformation (e.g., Teeth Whitening)" },
+        "beforeUrl": { "type": "string", "description": "Base64 or URL for the before photo" },
+        "afterUrl": { "type": "string", "description": "Base64 or URL for the after photo" },
+        "status": { "type": "string", "enum": ["pending", "approved", "rejected"], "description": "Approval status" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "When the submission was created" }
+      },
+      "required": ["patientUid", "title", "beforeUrl", "afterUrl", "status", "createdAt"]
+    },
+    "Appointment": {
+      "title": "Appointment",
+      "description": "A patient's request for an appointment",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique appointment ID" },
+        "patientName": { "type": "string", "description": "Name of the patient" },
+        "patientPhone": { "type": "string", "description": "Phone number of the patient" },
+        "patientEmail": { "type": "string", "format": "email", "description": "Email address of the patient" },
+        "preferredDate": { "type": "string", "description": "Date requested" },
+        "preferredTime": { "type": "string", "description": "Time slot requested" },
+        "serviceType": { "type": "string", "description": "Type of dental service requested" },
+        "message": { "type": "string", "description": "Additional notes" },
+        "status": { "type": "string", "enum": ["pending", "approved", "rejected"], "description": "Appointment status" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "When the request was made" }
+      },
+      "required": ["patientName", "patientPhone", "preferredDate", "preferredTime", "serviceType", "status", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{uid}": {
+      "schema": "User",
+      "description": "User profiles"
+    },
+    "/gallery_submissions/{submissionId}": {
+      "schema": "GallerySubmission",
+      "description": "Patient photo submissions for the gallery"
+    },
+    "/appointments/{appointmentId}": {
+      "schema": "Appointment",
+      "description": "Patient appointment requests"
+    }
+  }
+}

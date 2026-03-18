@@ -1,0 +1,7 @@
+{
+  "name": "Dr. Rajib Acharyya Dental Clinic",
+  "description": "Professional dental care in Guwahati, Assam. Expert treatments including general dentistry, orthodontics, and cosmetic procedures.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

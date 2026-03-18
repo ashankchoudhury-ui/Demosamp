@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-medical-blue: #0066CC;
+  --color-medical-teal: #4DB8C4;
+  --color-medical-light: #F8FAFC;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-slate-900 bg-white;
+  }
+}
+
+@layer components {
+  .btn-teal {
+    @apply bg-medical-teal text-white px-6 py-3 rounded-lg font-semibold transition-all hover:opacity-90 hover:scale-105 active:scale-95 shadow-md;
+  }
+  .btn-outline {
+    @apply border-2 border-white text-white px-6 py-3 rounded-lg font-semibold transition-all hover:bg-white hover:text-medical-blue active:scale-95;
+  }
+  .section-padding {
+    @apply py-20 px-6 max-w-7xl mx-auto;
+  }
+}
