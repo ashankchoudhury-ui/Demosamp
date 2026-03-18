@@ -5,6 +5,15 @@ import { collection, query, where, orderBy, onSnapshot, addDoc, Timestamp } from
 import { useAuth } from '../contexts/AuthContext';
 import { Upload, X, CheckCircle2, Loader2 } from 'lucide-react';
 
+import whiteningBefore from '../assets/gallery/whitening_before.jpg';
+import whiteningAfter from '../assets/gallery/whitening_after.jpg';
+import veneersBefore from '../assets/gallery/veneers_before.jpg';
+import veneersAfter from '../assets/gallery/veneers_after.jpg';
+import implantsBefore from '../assets/gallery/implants_before.jpg';
+import implantsAfter from '../assets/gallery/implants_after.jpg';
+import alignmentBefore from '../assets/gallery/alignment_before.jpg';
+import alignmentAfter from '../assets/gallery/alignment_after.jpg';
+
 interface GalleryItem {
   title: string;
   before: string;
@@ -27,26 +36,26 @@ const Gallery = () => {
   const staticCases: GalleryItem[] = [
     { 
       title: "Teeth Whitening", 
-      before: "/gallery/whitening_before.jpg", 
-      after: "/gallery/whitening_after.jpg",
+      before: whiteningBefore, 
+      after: whiteningAfter,
       isStatic: true
     },
     { 
       title: "Dental Veneers", 
-      before: "/gallery/veneers_before.jpg", 
-      after: "/gallery/veneers_after.jpg",
+      before: veneersBefore, 
+      after: veneersAfter,
       isStatic: true
     },
     { 
       title: "Dental Implants", 
-      before: "/gallery/implants_before.jpg", 
-      after: "/gallery/implants_after.jpg",
+      before: implantsBefore, 
+      after: implantsAfter,
       isStatic: true
     },
     { 
       title: "Clear Alignment", 
-      before: "/gallery/alignment_before.jpg", 
-      after: "/gallery/alignment_after.jpg",
+      before: alignmentBefore, 
+      after: alignmentAfter,
       isStatic: true
     },
   ];
